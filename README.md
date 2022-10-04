@@ -3,6 +3,8 @@
 Task manager for the curious procrastinator
 </p>
 <p align="center">
+<a href="https://github.com/POeticPotatoes/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/POeticPotatoes/iwtl.svg?color=green" alt="License Badge">
 <a href="https://github.com/POeticPotatoes/iwtl/releases">
     <img src="https://img.shields.io/github/commits-since/POeticPotatoes/iwtl/latest.svg?color=green" alt="Version Badge">
 </a>
