@@ -48,6 +48,18 @@ iwtl provides several simple features:
 
 Learning is ultimately self-driven. The point of iwtl is to provide the user with a (randomised) framework to manage themselves when they find themselves with too many want-to-do's and too little brainspace to actually choose what to do.
 
+## Installation
+Latest Release: <a href="https://github.com/POeticPotatoes/iwtl/releases/tag/0.1.0-1-any">0.1.0-1-any</a>
+
+#### Arch:
+Download `iwtl-0.1.0-1-any.pkg.tar.zst`
+
+        sudo pacman -U /path/to/package/iwtl-0.1.0-1-any.pkg.tar.zst
+#### Debian/Ubuntu
+Download `iwtl-0.1.0-1-any.deb`
+
+        sudo apt install /path/to/package/iwtl-0.1.0-1.deb
+
 ## Usage
 
     Syntax: iwtl [add|list|random|complete|delete|find]
@@ -59,7 +71,7 @@ Learning is ultimately self-driven. The point of iwtl is to provide the user wit
     delete     Delete a task (forever)
     find       Find a task in the tasklist
 
-### Configuration
+#### Configuration
 iwtl comes with a list of default motivational text that displays upon completion of a task (mainly taken from Julian Gough's <a href="https://minecraft.fandom.com/wiki/End_Poem">end poem</a>, among other things). This list can be overriden by creating a file `.tome` in the home directory of the user.
 
     cp /usr/share/iwtl/tome ~/.tome
