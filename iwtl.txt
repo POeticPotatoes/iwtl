@@ -1,0 +1,25 @@
+Create custom version management system
+Application of linear functions
+Mutexes in cpp
+Usb connection protocol
+Git file comparison algorithm
+Database types (How they work)
+Linear algebra (Complete it!)
+Learn about x86 assembly
+Have you done your codeforces revision?
+How to make a vpn (Manually)
+OStep: Do a step
+Competitive programming handbook (Speedrun!)
+Cook something this week
+Clean room. Now.
+How to make a window in cpp (Do something cool with it!)
+How to make a nuget package
+Try using ftrace
+How (the heck) NTU STARS API calls work
+Mathematical function of perlin noise
+There is nothing to learn. Do 60 situps.
+Convert iwtl to an arch package
+Review codeforces educational round 136
+Complete 1729E, 1729F, 1726D
+Review ateneo 2020 qn H
+Fix iwtl and stop it from inting

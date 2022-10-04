@@ -1,0 +1,81 @@
+#!/usr/bin/bash
+
+IWTL_DIR="/usr/share/iwtl"
+IWTL_QUOTES="${IWTL_DIR}/quotes"
+IWTL_TOME="/home/${USER}/.tome"
+
+if [ ! -f $IWTL_TOME ]; then IWTL_TOME="${IWTL_DIR}/tome"; fi;
+
+IWTL_FILE="/home/${USER}/.iwtl"
+
+touch $IWTL_FILE
+
+usage()
+{
+    echo "iwtl (I Want To Learn)"
+    echo "Simple bash script and task randomizer for curious-lazy people"
+    echo
+    echo "Syntax: iwtl [add|list|random|complete|delete|find]"
+    echo "options:"
+    echo "add        Add a new task to the tasklist"
+    echo "list       See all existing tasks and taskid's"
+    echo "random     Get a random task from your tasklist"
+    echo "complete   Complete a task. Removes it from the tasklist"
+    echo "delete     Delete a task (forever)"
+    echo "find       Find a task in the tasklist"
+    echo
+}
+
+if [[ -z "$1" ]]; then usage && exit 1; fi;
+if [[ "$1" == "random" ]]
+then
+    echo "Here's a new task for you:"
+    echo "      $(iwtl list|shuf -n 1)"
+    exit 1
+fi
+if [[ "$1" == "list" ]]
+then
+    cat -n ${IWTL_FILE}
+    exit 1
+fi
+if [[ -z "$2" ]]; then usage && exit 1; fi;
+if [[ "$1" == "add" ]]
+then
+    echo $2 >> ${IWTL_FILE}
+    echo "'$2' added. Good luck completing it!"
+    echo "Task ID: $(iwtl list | wc -l)"
+    exit 1
+fi
+if [[ "$1" == 'find' ]]
+then
+    iwtl list | grep -i "$2"
+    exit 1
+fi
+task=$(sed "${2}q;d" ${IWTL_FILE})
+if [[ -z "$task" ]]; then echo "Error: Task doesn't exist. Try 'iwtl find'." && exit 1; fi;
+if [[ "$1" == "complete" ]]
+then
+    echo "Task: $task"
+    read -p "Are you sure you have completed this? [y/N]:" -n 1
+    echo
+    if ! [[ $REPLY =~ ^[Yy]$ ]]; then echo "Hmm... come back when you are done." && exit 1; fi;
+
+    sed -i "${2}d" ${IWTL_FILE}
+    echo =============================================
+    sed -e "s/\$USER/${USER}/" ${IWTL_QUOTES} |shuf -n 1| cowsay -f $(shuf -n 1 -e $(cowsay -l)) 
+    echo =============================================
+    echo "Completed task: $task"
+    cat ${IWTL_TOME}|shuf -n 1
+    echo =============================================
+    exit 1
+fi
+if [[ "$1" == "delete" ]]
+then
+    echo "Task: $task"
+    read -p "Are you sure you want to delte this task? [y/N]:" -n 1
+    echo
+    if ! [[ $REPLY =~ ^[Yy]$ ]]; then exit 1; fi;
+    sed -i "${2}d" ${IWTL_FILE}
+    echo "Task deleted. I hope you know what you're doing."
+    exit 1
+fi

@@ -1,0 +1,10 @@
+-s dir
+--name iwtl
+--license mit2
+--version 0.1.0
+--architecture native
+--depends bash --depends cowsay --depends sed
+--description "Random task suggester for curious-lazy people"
+--maintainer "POeticPotatoes <https://www.github.com/POeticPotatoes>"
+
+iwtl=/usr/bin/iwtl files/quotes=/usr/share/iwtl/quotes files/tome=/usr/share/iwtl/tome
