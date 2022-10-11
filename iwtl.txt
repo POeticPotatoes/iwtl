@@ -1,6 +1,5 @@
 Create custom version management system
 Application of linear functions
-Mutexes in cpp
 Usb connection protocol
 Git file comparison algorithm
 Database types (How they work)
@@ -22,4 +21,8 @@ Convert iwtl to an arch package
 Review codeforces educational round 136
 Complete 1729E, 1729F, 1726D
 Review ateneo 2020 qn H
-Fix iwtl and stop it from inting
+Review ICPC 2017 Barbell
+Last suggested/last added function to iwtl
+Write a PKGBUILD for iwtl
+Read my boi's papers (Sun Aixin)
+Learn more about church notation
