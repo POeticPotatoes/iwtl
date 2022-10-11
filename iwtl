@@ -62,7 +62,7 @@ then
 
     sed -i "${2}d" ${IWTL_FILE}
     echo =============================================
-    sed -e "s/\$USER/${USER}/" ${IWTL_QUOTES} |shuf -n 1| cowsay -f $(shuf -n 1 -e $(cowsay -l)) 
+    sed -e "s/\$USER/${USER}/" ${IWTL_QUOTES} |shuf -n 1| cowsay -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) 
     echo =============================================
     echo "Completed task: $task"
     cat ${IWTL_TOME}|shuf -n 1
