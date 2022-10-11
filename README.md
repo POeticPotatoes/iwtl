@@ -56,11 +56,11 @@ Latest Release: <a href="https://github.com/POeticPotatoes/iwtl/releases/tag/0.1
 #### Arch:
 Download `iwtl-0.1.0-1-any.pkg.tar.zst`
 
-        sudo pacman -U /path/to/package/iwtl-0.1.0-1-any.pkg.tar.zst
+    sudo pacman -U /path/to/package/iwtl-0.1.0-1-any.pkg.tar.zst
 #### Debian/Ubuntu
 Download `iwtl-0.1.0-1-any.deb`
 
-        sudo apt install /path/to/package/iwtl-0.1.0-1.deb
+    sudo apt install /path/to/package/iwtl-0.1.0-1-any.deb
 
 ## Usage
 
@@ -80,5 +80,5 @@ iwtl comes with a list of default motivational text that displays upon completio
 
 ## Notes
 * The configuration file is named 'tome' not as a reference to a large scholarly paper pile, but as an allusion to the fact that it is written to motivate your future self ("to myself in the future", ie. "to me").
-* I intend to create a proper Makefile for this project, and also (possibly) create some release for MacOS. (Don't worry, it's in my iwtl list).
+* I intend to create a proper PKGBUILD for this project, and also (possibly) create some release for MacOS. (Don't worry, it's in my iwtl list).
 
