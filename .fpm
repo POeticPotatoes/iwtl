@@ -1,7 +1,7 @@
 -s dir
 --name iwtl
 --license mit2
---version 0.1.0
+--version 0.1.1
 --architecture native
 --depends bash --depends cowsay --depends sed
 --description "Random task suggester for curious-lazy people"
